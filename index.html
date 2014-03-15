@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="utf-8">
+  <head>
+    <meta charset="utf-8" />
+    <title>Billie GreenHouse</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/foundation.min.css" />
+    <script src="js/vendor/modernizr.js"></script>
+	<style type="text/css">
+	
+		.section {
+			height: 530px;
+		}
+		#product {
+			width: 100%;
+			position:relative;
+		}
+		
+		.product-item-img {
+			width: 80px;
+			margin: 5px 15px;
+		}
+
+		.product-description-div {
+			position:absolute;
+			top: 100px;
+			right:0;
+			width:600px;
+			height: 350px;
+			background: url(img/bg_trans.png);
+			z-index: 5;
+			padding: 20px;
+		}
+		.product-description-div h2 {
+			color: #ccc;
+		}
+		.product-description-text {
+			color: #fff;
+			text-align: justify;
+			font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+			font-size: 14px;
+			line-height: 1.428571429;
+			height: 200px;
+		}
+		
+		.copyright {
+			font-family: Helvetica,Arial,sans-serif;
+			line-height: 25px;
+			font-size: 12px;
+			color: #bdbdbd;
+			padding: 25px 0;
+		}
+		
+		.copyright .columns {
+			padding: 10px 0 5px 0;
+		}
+		
+		img.desaturate {
+			-webkit-filter: grayscale(100%);
+			-moz-filter: grayscale(100%);
+			filter: grayscale(100%);
+		}
+		
+		#buy-btn {
+			font-size: 1.0rem;
+		}
+		
+		#product {
+		  position:relative;
+		  width:100%;
+		  margin:0 auto 10px;
+		}
+		#product div.product-img {
+		  position:absolute;
+		  left:0;
+		  -webkit-transition: opacity 1s ease-in-out;
+		  -moz-transition: opacity 1s ease-in-out;
+		  -o-transition: opacity 1s ease-in-out;
+		  transition: opacity 1s ease-in-out;
+		  opacity:0;
+		  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+		  filter: alpha(opacity=0);
+		  background-size: cover;
+		  width: 100%;
+		  height: 500px;
+		  background-size: cover;
+		}
+
+		#product div.opaque {
+		  opacity:1;
+		  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+		  filter: alpha(opacity=1);
+		}
+		
+		#cart-div {
+			 width: 400px;
+			 height: 80px;
+			 position: fixed;
+			 top: 15px;
+			 right: 15px;
+			 background-color: #ffffff;
+			 z-index: 999999;
+			 border:0.094em solid;
+			 border-radius:5px;
+			 border-color: #ddd;
+			 display: none;
+		}
+		
+	</style>
+  </head>
+  <body>
+	<div id="cart-div"></div>
+  
+  
+    <div data-magellan-expedition="fixed" data-options="destination_threshold:65;throttle_delay:0;">
+	  <dl class="sub-nav">
+		<dd data-magellan-arrival="product"><a href="#product">Product</a></dd>
+		<dd data-magellan-arrival="about"><a href="#about">About Us</a></dd>
+		<dd data-magellan-arrival="contact"><a href="#contact">Contact</a></dd>
+	  </dl>
+	</div>
+	
+	<a name="product"></a>
+	<h3 data-magellan-destination="product"></h3>
+	<div class="section">
+		<div id="product">
+			<div class="product-img opaque" style="background-image: url(img/a.png)"></div>
+			<div class="product-img" style="background-image: url(img/b.png)"></div>
+			
+			<div class="product-description-div">
+				<h2 id="product-name">Ethiopia Yirga Cheffe Gedeo</h2>
+				<div class="product-description-text">
+				<span>Here we have our last of the ECX coffees we brought in this year. And we definitely saved one of the best for last. We don't usually pick much coffee up that's handled through the Commodity Exchange (this year we picked up 3), but the quality of this particular lot is so high that, in my opinion, it would have been foolish to turn it away. We listed a lot earlier this season as "Gedeo" too, but this is not the same coffee</span>
+				</div>
+				<div class="row">
+					<div class="small-3 small-offset-6 columns">
+						<select id="product-amount">
+						  <option value="1">1</option>
+						  <option value="2">2</option>
+						  <option value="3">3</option>
+						  <option value="4">4</option>
+						</select>
+					</div>
+					<div class="small-3 columns">
+						<button id="buy-btn" class="button radius tiny success">
+							<strong>購買</strong>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div>
+		<img class="product-item-img img-circle active-item-img" src="img/green_bean.png" />
+		<img class="product-item-img img-circle desaturate" src="img/green_bean.png" />
+		<img class="product-item-img img-circle desaturate" src="img/green_bean.png" />
+	</div>
+	
+	<hr>
+	
+	<a name="about"></a>
+	<h3 data-magellan-destination="about"></h3>
+	<div class="section">
+		<br><br><br>
+		<div class="row">
+			<div class="small-4 columns">
+				<h2>Heading</h2>
+				<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+			</div>
+			<div class="small-4 columns">
+				<h2>Heading</h2>
+				<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+			</div>
+			<div class="small-4 columns">
+				<h2>Heading</h2>
+				<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
+			</div>
+		</div>
+	</div>
+	
+	<hr>
+	
+	<a name="contact"></a>
+	<h3 data-magellan-destination="contact"></h3>
+	<div class="section">
+		<br><br><br><br>
+		<div class="row">
+			<div class="small-4 columns">
+				<div class="row">
+					<div class="small-12 columns">
+					  <label>E-mail
+						<input type="email" placeholder="Your E-mail" />
+					  </label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="small-12 columns">
+					  <label>Subject
+						<input type="text" placeholder="Subject" />
+					  </label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="small-12 columns">
+					  <label>Message
+						<textarea placeholder="small-12.columns" style="height: 120px"></textarea>
+					  </label>
+					</div>
+				</div>
+				<button class="small radius">Send</button>
+			</div>
+			<div class="small-8 columns">
+				<img src="img/bean-contact.png" />
+			</div>
+		</div>
+		<br>
+		<div class="copyright" style="height:160px;background-color: #262626;">
+			<div class="row" data-equalizer>
+				<div class="small-7 columns" data-equalizer-watch>
+					<span>E-mail: info@billiecafe.com</span>
+					<br>
+					<span>Phone: 02-24769869</span>
+					<br>
+					<span>Address: 7F, No.2, Alley 315, Sec.2, Chung Shan Road, Chung Ho City, Taipei City 235, Taiwan</span>
+				</div>
+				<div class="small-4 columns" data-equalizer-watch style="border-left: 1px dotted #6b6b6b; padding-left: 20px; margin-left: 10px;">
+					<br><br>
+					<span class="right" style="color: #bdbdbd;">© Copyright 2014 by BillieCafe. All Rights Reserved. </span>
+				</div>
+			</div>
+		
+		</div>
+	</div>
+	
+	
+	
+
+    <script src="js/vendor/jquery.js"></script>
+	<script src="js/vendor/jquery.cookie.js"></script>
+    <script src="js/foundation.min.js"></script>
+	<script src="js/foundation/foundation.magellan.js"></script>
+    <script>
+		function cf() {
+			var active = $('#product div.opaque');
+			var next = (active.next('div.product-img').length > 0) ? active.next() : $('#product div.product-img:first');
+			$("#product div.product-img").removeClass("opaque");
+			next.addClass("opaque");
+		}
+		
+		function showCart() {
+			$("#cart-div").fadeIn();
+		}
+		
+		function hideCart() {
+			$("#cart-div").fadeOut();
+		}
+		
+		function addToCart() {
+			$.cookie.json = true;
+			// create product object
+			var product = {};
+			product.name = $("#product-name").html();
+			product.amount = parseInt($("#product-amount").val());
+			// get list from cookie
+			var cart = {"list":[]};
+			if($.cookie("cart") !== "undefined") {
+				alert(JSON.stringfy($.cookie("cart")));
+				cart = $.cookie("cart");
+			}
+			cart.list.push(product);
+			$.cookie("cart", cart.list);
+			alert(JSON.stringify(cart.list));
+			
+			showCart();
+		}
+
+		$(function(){
+			$(document).foundation();
+			// set product background image 
+			setInterval('cf()', 7000);
+			$("#buy-btn").on("click", addToCart);
+			// set item-image hover effect
+			$(".product-item-img").hover(
+				function() {
+					if(!$(this).hasClass("active-item-img")) {
+						$(this).removeClass("desaturate");
+					}
+				},
+				function(){
+					if(!$(this).hasClass("active-item-img")) {
+						$(this).addClass("desaturate");
+					}
+			});
+			
+			// set item-img click effect
+		});
+    </script>
+  </body>
+</html>
