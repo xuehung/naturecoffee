@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>Billie GreenHouse</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/foundation.min.css" />
+	<link rel="stylesheet" href="css/foundation.min.css" />
     <script src="js/vendor/modernizr.js"></script>
 	<style type="text/css">
 	
@@ -93,30 +93,59 @@
 		}
 		
 		#cart-div {
-			 width: 400px;
-			 height: 80px;
-			 position: fixed;
-			 top: 15px;
-			 right: 15px;
-			 background-color: #ffffff;
-			 z-index: 999999;
-			 border:0.094em solid;
-			 border-radius:5px;
-			 border-color: #ddd;
-			 display: none;
+		    width: 450px;
+		    min-height: 80px;
+		    position: fixed;
+		    top: 15px;
+		    right: 15px;
+		    padding: 10px 40px 0 10px;
+		    background-color: #ffffff;
+		    z-index: 999999;
+		    border:0.094em solid;
+		    border-radius:5px;
+		    -webkit-border-radius: 5px;
+		    -moz-border-radius: 5px;
+		    border-color: #ddd;
+		    display: none;
+		    -webkit-box-shadow: 9px 11px 16px 4px rgba(46,46,46,0.77);
+		    -moz-box-shadow: 9px 11px 16px 4px rgba(46,46,46,0.77);
+		    box-shadow: 9px 11px 16px 4px rgba(46,46,46,0.77);
 		}
+		#cart-close-btn {
+		    height: 18px;
+		    width: 18px;
+		    background-image: url(img/close.gif);
+		    position: absolute;
+		    right: 10px;
+		}
+
+		.about-img {
+		    border-radius: 150px;
+		    -webkit-border-radius: 150px;
+		    -moz-border-radius: 150px;
+		    height: 230px;
+		    width: 230px;
+		    margin: 15px;
+		}
+
 		
 	</style>
   </head>
   <body>
-	<div id="cart-div"></div>
+      <div id="cart-div">
+	  <div id="cart-close-btn"></div>
+	  <div id="cart-body" style="margin: 5px"></div>
+	  <hr>
+	  <button class="radius tiny" style="font-size: 1.0rem">Bill</div>
+      </div>
   
   
     <div data-magellan-expedition="fixed" data-options="destination_threshold:65;throttle_delay:0;">
 	  <dl class="sub-nav">
-		<dd data-magellan-arrival="product"><a href="#product">Product</a></dd>
-		<dd data-magellan-arrival="about"><a href="#about">About Us</a></dd>
-		<dd data-magellan-arrival="contact"><a href="#contact">Contact</a></dd>
+		<dd data-magellan-arrival="product"><a href="#product">精選生豆</a></dd>
+		<dd data-magellan-arrival="about-us"><a href="#about-us">關於碧利</a></dd>
+		<dd data-magellan-arrival="about-farm"><a href="#about-farm">產地故事</a></dd>
+		<dd data-magellan-arrival="contact"><a href="#contact">聯絡我們</a></dd>
 	  </dl>
 	</div>
 	
@@ -158,24 +187,54 @@
 	
 	<hr>
 	
-	<a name="about"></a>
-	<h3 data-magellan-destination="about"></h3>
+	<a name="about-us"></a>
+	<h3 data-magellan-destination="about-us"></h3>
 	<div class="section">
-		<br><br><br>
-		<div class="row">
-			<div class="small-4 columns">
-				<h2>Heading</h2>
-				<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-			</div>
-			<div class="small-4 columns">
-				<h2>Heading</h2>
-				<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-			</div>
-			<div class="small-4 columns">
-				<h2>Heading</h2>
-				<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-			</div>
+	    <div class="row">
+		<div class="small-12 columns text-center">
+		    <h2>碧利咖啡</h2>
+		    <h4 class="subheader">
+			碧利咖啡致力於將優質、新鮮、溫暖的咖啡生豆直接重產地送到您的手中。我們每年親自前往產地莊園嚴選高品質的生豆，讓您能夠體會那芬芳香氣與最貼近大自然的味道，幫助您喝到好咖啡一直是碧利咖啡所追求的目標！
+		    </h4>
 		</div>
+	    </div>
+	    <br>
+	    <div class="row text-center">
+		<div class="small-4 columns">
+		    <h3>親訪產地</h3>
+		    <img src="img/about_1.png" class="about-img">
+		    <p>碧利咖啡每年造訪數十個咖啡莊園，與國外知名烘焙商一同採購，因此交與您的咖啡豆的品質為世界頂尖。</p>
+		</div>
+		<div class="small-4 columns">
+		    <h3>直營莊園</h3>
+		    <img src="img/about_2.png" class="about-img">
+		    <p>除了造訪當地莊園之外，碧利咖啡亦擁有專屬直營莊園，不僅能確保咖啡豆的高品質，更提供獨特風味。</p>
+		</div>
+		<div class="small-4 columns">
+		    <h3>批量進貨</h3>
+		    <img src="img/about_3.png" class="about-img">
+		    <p>碧利咖啡每次採購數公噸咖啡豆，有些更是直接包下莊園所有產量，故能夠提供您最實惠的價格。</p>
+		</div>
+	    </div>
+	</div>
+
+	<hr>
+
+	<a name="about-farm"></a>
+	<h3 data-magellan-destination="about-farm"></h3>
+	<div class="section">
+	    <br><br><br>
+	    <div class="row">
+		<div class="small-8 columns">
+		    <img src="img/farm.jpg">
+		</div>
+		<div class="small-4 columns">
+		    <h2>碧利咖啡</h2>
+		    <h4 class="subheader">
+			碧利咖啡致力於將優質、新鮮、溫暖的咖啡生豆直接重產地送到您的手中。我們每年親自前往產地莊園嚴選高品質的生豆，讓您能夠體會那芬芳香氣與最貼近大自然的味道，幫助您喝到好咖啡一直是碧利咖啡所追求的目標！
+		    </h4>
+		</div>
+	    </div>
 	</div>
 	
 	<hr>
@@ -235,65 +294,10 @@
 	
 	
 
-    <script src="js/vendor/jquery.js"></script>
+	<script src="js/vendor/jquery.js"></script>
 	<script src="js/vendor/jquery.cookie.js"></script>
-    <script src="js/foundation.min.js"></script>
+	<script src="js/foundation.min.js"></script>
 	<script src="js/foundation/foundation.magellan.js"></script>
-    <script>
-		function cf() {
-			var active = $('#product div.opaque');
-			var next = (active.next('div.product-img').length > 0) ? active.next() : $('#product div.product-img:first');
-			$("#product div.product-img").removeClass("opaque");
-			next.addClass("opaque");
-		}
-		
-		function showCart() {
-			$("#cart-div").fadeIn();
-		}
-		
-		function hideCart() {
-			$("#cart-div").fadeOut();
-		}
-		
-		function addToCart() {
-			$.cookie.json = true;
-			// create product object
-			var product = {};
-			product.name = $("#product-name").html();
-			product.amount = parseInt($("#product-amount").val());
-			// get list from cookie
-			var cart = {"list":[]};
-			if($.cookie("cart") !== "undefined") {
-				alert(JSON.stringfy($.cookie("cart")));
-				cart = $.cookie("cart");
-			}
-			cart.list.push(product);
-			$.cookie("cart", cart.list);
-			alert(JSON.stringify(cart.list));
-			
-			showCart();
-		}
-
-		$(function(){
-			$(document).foundation();
-			// set product background image 
-			setInterval('cf()', 7000);
-			$("#buy-btn").on("click", addToCart);
-			// set item-image hover effect
-			$(".product-item-img").hover(
-				function() {
-					if(!$(this).hasClass("active-item-img")) {
-						$(this).removeClass("desaturate");
-					}
-				},
-				function(){
-					if(!$(this).hasClass("active-item-img")) {
-						$(this).addClass("desaturate");
-					}
-			});
-			
-			// set item-img click effect
-		});
-    </script>
-  </body>
+	<script src="js/bean.js"></script>
+    </body>
 </html>
